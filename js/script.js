@@ -13,7 +13,9 @@ let root = new Vue({
 
                     this.mails.push(res.data.response)
 
+                    // CONDIZIONE PER FAR COMPARIRE L ARRAY DELLE MAIL SOLO QUANDO SONO STATI GENERATI TUTTI E 10 
 
+                    if (this.mails.length < 10) return;
                     console.log(this.mails)
                 })
         }
